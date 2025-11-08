@@ -1,0 +1,29 @@
+<main class="page-main">
+  <div class="app-container">
+    <div class="content-card">
+      <p-timeline [value]="events" align="left" styleClass="resume-timeline">
+        <ng-template pTemplate="marker" let-event>
+          <span class="custom-marker" [ngStyle]="{'background-color': event.color}">
+            <i [ngClass]="event.icon" aria-hidden="true"></i>
+          </span>
+        </ng-template>
+
+        <ng-template pTemplate="opposite" let-event>
+          <div class="opposite-wrap">
+            <div class="date">{{ event.date }}</div>
+            <div class="company">{{ event.company }}</div>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="content" let-event>
+          <div class="content-wrap">
+            <h3 class="role">{{ event.status }}</h3>
+            <ul class="bullets">
+              <li *ngFor="let d of event.details">{{ d }}</li>
+            </ul>
+          </div>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </div>
+</main>

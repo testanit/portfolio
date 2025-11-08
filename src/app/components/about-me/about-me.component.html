@@ -1,0 +1,104 @@
+<main class="page-main">
+  <div class="app-container">
+    <div class="content-card">
+      <header class="card-hero">
+        <h1 class="page-title">Jelena Ivic</h1>
+        <p class="subtitle">Senior .NET Engineer • Full-Stack Engineer</p>
+        <div class="contact">
+          <p class="contact-line">Location: Rotterdam, Netherlands</p>
+          <p class="contact-line">
+            Email:
+            <a href="mailto:ivicj123@gmail.com">{{'ivicj123@gmail.com'}}</a>
+          </p>
+        </div>
+        <div class="card-cta">
+          <p-button pButton type="button" label="Download Resume" class="p-button-raised"></p-button>
+        </div>
+      </header>
+
+      <div class="card-body">
+        <section class="bio">
+          <h2>Profile</h2>
+          <p>
+            Proactive and results-oriented Senior .NET Engineer with 8+ years of experience building enterprise
+            software and modern web solutions. I specialize in creating well-structured, automated, and
+            documented environments that enhance team productivity. I enjoy bringing order to complex systems,
+            mentoring developers, and building efficient, modern .NET applications that make a measurable
+            business impact.
+          </p>
+        </section>
+
+        <section class="skills">
+          <h2>Core Skills</h2>
+
+          <div class="skills-group">
+            <h3>Languages &amp; Frameworks</h3>
+            <div class="chips">
+              <p-tag icon="pi pi-code" value="C#"></p-tag>
+              <p-tag icon="pi pi-cog" value=".NET Core / .NET Framework"></p-tag>
+              <p-tag icon="pi pi-globe" value="Blazor"></p-tag>
+              <p-tag icon="pi pi-database" value="Entity Framework Core"></p-tag>
+              <p-tag icon="pi pi-file" value="Python"></p-tag>
+              <p-tag icon="pi pi-code" value="TypeScript"></p-tag>
+              <p-tag icon="pi pi-code" value="Angular"></p-tag>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Cloud &amp; DevOps</h3>
+            <div class="chips">
+              <p-tag icon="pi pi-cloud" value="Azure DevOps"></p-tag>
+              <p-tag icon="pi pi-cloud" value="Azure Pipelines"></p-tag>
+              <p-tag icon="pi pi-cloud" value="AWS"></p-tag>
+              <p-tag icon="pi pi-briefcase" value="Docker"></p-tag>
+              <p-tag icon="pi pi-github" value="Git"></p-tag>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Databases</h3>
+            <div class="chips">
+              <p-tag icon="pi pi-database" value="SQL Server"></p-tag>
+              <p-tag icon="pi pi-database" value="PostgreSQL"></p-tag>
+              <p-tag icon="pi pi-database" value="IBM DB2 LUW"></p-tag>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Architecture &amp; Others</h3>
+            <div class="chips">
+              <p-tag icon="pi pi-sitemap" value="Microservices"></p-tag>
+              <p-tag icon="pi pi-layer" value="MVC"></p-tag>
+              <p-tag icon="pi pi-folder" value="Repository &amp; Unit of Work"></p-tag>
+              <p-tag icon="pi pi-check" value="CQS"></p-tag>
+              <p-tag icon="pi pi-external-link" value="REST APIs"></p-tag>
+              <p-tag icon="pi pi-th-large" value="Design Patterns"></p-tag>
+              <p-tag icon="pi pi-refresh" value="Agile / Scrum"></p-tag>
+              <p-tag icon="pi pi-sync" value="CI/CD"></p-tag>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills-carousel">
+          <p-carousel
+            [value]="skillsForCarousel"
+            [numVisible]="6"
+            [numScroll]="1"
+            [circular]="true"
+            [autoplayInterval]="carouselInterval"
+            [responsiveOptions]="carouselResponsive"
+          >
+            <ng-template pTemplate="item" let-skill>
+              <div class="carousel-item">
+                <div class="skill-circle">
+                  <i [class]="skill.icon"></i>
+                </div>
+                <div class="skill-label">{{ skill.label }}</div>
+              </div>
+            </ng-template>
+          </p-carousel>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>

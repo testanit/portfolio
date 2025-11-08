@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@emailjs/browser": "^4.4.1",
     "@primeng/themes": "^18.0.7-lts",
     "primeicons": "^7.0.0",
     "primeng": "^18.0.2",

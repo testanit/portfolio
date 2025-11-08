@@ -1,0 +1,245 @@
+:host {
+  display: block;
+}
+
+.about-container {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  display: block;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.about-main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  box-sizing: border-box;
+}
+
+.resizable {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 300px;
+  max-height: 90vh;
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,42,0.04);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  box-shadow: 0 4px 14px rgba(2,6,23,0.06);
+  box-sizing: border-box;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.avatar-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+  margin-bottom: .75rem;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  margin: .25rem 0;
+  font-size: clamp(1.4rem, 3.2vw, 2.3rem);
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(.85rem, 1.6vw, .9rem);
+  color: #475569;
+  text-align: center;
+}
+
+.title.large {
+  font-size: clamp(1.1rem, 2.6vw, 1.8rem);
+  font-weight: 800;
+  color: #0b1220;
+  text-align: center;
+  margin-bottom: .25rem;
+}
+
+.contact {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: clamp(.85rem, 1.5vw, .9rem);
+  color: #334155;
+}
+
+.contact-line {
+  margin: .25rem 0;
+  text-align: center;
+  word-break: break-word;
+}
+
+.card-cta {
+  margin-top: 1.25rem;
+}
+
+.card-cta .p-button {
+  width: 100%;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: .6rem 1rem;
+}
+
+.card-cta .p-button.p-button-raised {
+  box-shadow: 0 8px 20px rgba(59,130,246,0.12);
+}
+
+.bio h2,
+.skills h2 {
+  margin-top: 0;
+  color: #0f172a;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.bio p {
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.skills {
+  margin-top: 1rem;
+}
+
+.skills-group {
+  margin-bottom: 1rem;
+}
+
+.skills-group h3 {
+  margin: .25rem 0 .5rem;
+  color: #0f172a;
+  font-size: clamp(.95rem, 1.7vw, 1rem);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.chip {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  border: 1px solid rgba(99,102,241,0.08);
+}
+
+.chips p-tag {
+  margin: .25rem .25rem .25rem 0;
+}
+
+.p-tag {
+  margin: .25rem .5rem .25rem 0;
+  background: linear-gradient(90deg, #eef2ff, #f0f9ff);
+  color: #0f172a;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,0.04);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.skills-carousel {
+  margin-top: 1.25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.p-carousel {
+  width: 100%;
+}
+
+.p-carousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+  box-sizing: border-box;
+  padding: .5rem 0;
+}
+
+.carousel-item .skill-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(139,92,246,0.12), rgba(59,130,246,0.06));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+}
+
+.carousel-item .skill-circle i {
+  font-size: 1.6rem;
+  color: #4c1d95;
+}
+
+.skill-label {
+  font-size: .85rem;
+  color: #0f172a;
+}
+
+@media (max-width: 992px) {
+  .profile-header { text-align: center; }
+  .card-cta .p-button { width: 100%; }
+  .chips { justify-content: center; }
+}
+
+@media (max-width: 880px) {
+  .about-card { flex-direction: column; }
+  .about-side { width: 100%; flex-direction: row; align-items: center; gap: 1rem; padding: 1rem; }
+  .avatar-wrap { width: 84px; height: 84px; }
+  .about-main { padding: 1rem; }
+}
+
+@media (max-width: 680px) {
+  .resizable { min-width: 100%; resize: vertical; padding: 1rem; }
+  .carousel-item .skill-circle { width: 56px; height: 56px; }
+  .skill-label { font-size: .8rem; }
+}
+
+@media (min-width: 768px) {
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+@media (min-width: 1200px) {
+  .skills { grid-template-columns: repeat(3, 1fr); }
+}

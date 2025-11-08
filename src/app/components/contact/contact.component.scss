@@ -1,0 +1,146 @@
+.contact-page {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #0b1220;
+}
+
+.lead {
+  color: #475569;
+  margin-top: 0.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0 0;
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.65rem 0;
+  color: #334155;
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.04);
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form .form .row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.06);
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.primary {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  color: white;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid rgba(15,23,42,0.06);
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.muted {
+  color: #64748b;
+}
+
+.note code {
+  background: rgba(15,23,42,0.03);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+}
+
+.contact-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 880px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+

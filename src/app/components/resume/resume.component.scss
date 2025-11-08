@@ -1,0 +1,93 @@
+/* Scope all overrides to this timeline instance */
+:host ::ng-deep .resume-timeline {
+  /* Thinner, subtler vertical line */
+  .p-timeline-event-connector {
+    width: 2px;
+    background-color: #e0e0e0;
+  }
+
+  /* Layout sizing: left (opposite) column + right (content) column */
+  .p-timeline-event {
+    align-items: flex-start; /* keep content aligned nicely */
+  }
+
+  .p-timeline-event-opposite {
+    width: 16rem;           /* left column width */
+    padding-right: 1rem;
+    text-align: right;
+    line-height: 1.25rem;
+  }
+
+  .p-timeline-event-content {
+    padding-left: 1rem;     /* spacing from the center line */
+    min-width: 0;           /* avoid overflow */
+  }
+
+  /* Marker: bigger, centered, with icon */
+  .p-timeline-event-marker {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .custom-marker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    color: #fff;
+    /* subtle ring */
+    box-shadow:
+      0 0 0 3px #fff inset,
+      0 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Typography */
+  .opposite-wrap {
+    .date {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .company {
+      font-size: 0.875rem;
+      color: #607d8b;
+    }
+  }
+
+  .content-wrap {
+    .role {
+      margin: 0 0 0.25rem;
+      font-size: 1.05rem;
+    }
+    .bullets {
+      margin: 0.25rem 0 0;
+      padding-left: 1.1rem;
+    }
+  }
+
+  /* Responsive: stack on small screens (date above content) */
+  @media (max-width: 768px) {
+    .p-timeline-event {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .p-timeline-event-opposite {
+      width: 100%;
+      text-align: left;
+      padding-right: 0;
+      order: 1; /* date/company first */
+    }
+
+    .p-timeline-event-separator {
+      order: 2; /* marker/line */
+    }
+
+    .p-timeline-event-content {
+      order: 3; /* details after */
+      padding-left: 0;
+    }
+  }
+}
