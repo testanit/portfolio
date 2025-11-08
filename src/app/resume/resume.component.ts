@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './resume.component.html',
-  styleUrl: './resume.component.scss'
+  styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
 

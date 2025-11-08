@@ -1,12 +1,10 @@
-
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <h1>Zdravo, {{ 'drugari' }}</h1>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
+<div style="display: flex; min-height: 100vh;">
+  <!-- Levi meni -->
+  <div style="width: 250px; background: #f4f4f4; padding: 1rem; border-right: 1px solid #ddd;">
+    <p-panelMenu [model]="items"></p-panelMenu>
   </div>
-</main>
 
-
-<router-outlet />
+  <div style="flex: 1; padding: 1rem;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
